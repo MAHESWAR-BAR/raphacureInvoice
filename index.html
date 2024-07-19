@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        .invoice-box {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid black;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+            font-size: 16px;
+            line-height: 24px;
+            color: #555;
+        }
+
+        .invoice-box table {
+            width: 100%;
+            line-height: inherit;
+            text-align: left;
+            border-collapse: collapse;
+        }
+
+        .invoice-box table td {
+            padding: 5px;
+            vertical-align: top;
+        }
+
+        .invoice-box table tr td:nth-child(2) {
+            text-align: right;
+        }
+
+        .invoice-box table tr.top table td {
+            padding-bottom: 20px;
+        }
+
+        .invoice-box table tr.information table td {
+            padding-bottom: 40px;
+        }
+
+        .invoice-box table tr.heading td {
+            background: #eee;
+            border-bottom: 1px solid #ddd;
+            font-weight: bold;
+        }
+
+        .invoice-box table tr.details td {
+            padding-bottom: 20px;
+        }
+
+        .invoice-box table tr.item td {
+            border-bottom: 1px solid #eee;
+        }
+
+        .invoice-box table tr.item.last td {
+            border-bottom: none;
+        }
+
+        .invoice-box table tr.total td:nth-child(2) {
+            border-top: 2px solid #eee;
+            font-weight: bold;
+        }
+
+        .invoice-box .title {
+            font-size: 36px;
+            line-height: 36px;
+            color: #333;
+            text-align: center;
+        }
+
+        .invoice-box .signature {
+            text-align: right;
+            padding-top: 20px;
+        }
+
+        .invoice-box .bank-details,
+        .invoice-box .remarks,
+        .invoice-box .declaration {
+            margin-top: 20px;
+        }
+
+        .invoice-box .subject {
+            text-align: center;
+            margin-top: 40px;
+            font-weight: bold;
+        }
+
+        .invoice-box .bordered {
+            border: 1px solid #000;
+            padding: 10px;
+        }
+
+        .invoice-box .bordered table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .invoice-box .bordered table,
+        .invoice-box .bordered th,
+        .invoice-box .bordered td {
+            border: 1px solid #000;
+        }
+
+        .invoice-box .bordered th,
+        .invoice-box .bordered td {
+            padding: 5px;
+        }
+
+        .invoice-box .header-right {
+            text-align: right;
+        }
+
+        img {
+            height: 12vh;
+            width: auto;
+        }
+
+        h5 {
+            font-size: 1.5rem;
+            margin: auto;
+            padding-left: 44%;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+
+<body style="box-shadow: 2px 2px 10px #f2f2f2, -2px -2px 10px #f2f2f2;">
+    <div class="invoice-box">
+        <img src="rectangle_7.png"></img>
+        <h5>INVOICE</h5>
+
+        <table cellpadding="0" cellspacing="0" style="box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.1), -5px -5px 10px hsla(0, 0%, 0%, 0.1);">
+            <tr class="top">
+                <td colspan="2" style="">
+                    <table>
+                        <tr>
+                            <td class="title">
+
+                            </td>
+                            <td class="header-right">
+                                Invoice No.: CCPC24725<br>
+                                Date: 31-Mar-24
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="information">
+                <td colspan="2">
+                    <table>
+                        <tr>
+                            <td class="bordered">
+                                <b>Cure and Care Primary Care Private Limited</b><br>
+                                No. 208, M Lifestyle Aldila Begur Road, Opp High School Bangalore - 560068<br>
+                                GSTIN/UIN: 29AAJCC4434A1ZX<br>
+                                State Name: Karnataka, Code: 29<br>
+                                CIN: U85100KA2021PTC146840<br>
+                                E-Mail: jeya@raphacure.com
+                            </td>
+                            <td class="bordered">
+                                Buyer (Bill to):<br>
+                                <b>Flow P&E India Private Limited</b><br>
+                                7th Floor, B Wing, 56/18 and 55/9 Ozonne Manay Tech Park Begur Hobli Bangalore South
+                                Taluk Hongasandra Village, Bangalore - 560068<br>
+                                GSTIN/UIN: 29AADCF8906E1ZJ<br>
+                                State Name: Karnataka, Code: 29
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="heading">
+                <td colspan="2" class="bordered">
+                    <table>
+                        <tr>
+                            <th>Description of Services</th>
+                            <th>HSN/SAC</th>
+                            <th>Quantity</th>
+                            <th>Rate</th>
+                            <th>Per</th>
+                            <th>Amount</th>
+                        </tr>
+                        <tr class="item">
+                            <td>Annual Health Check-up for Female Below 40</td>
+                            <td>999316</td>
+                            <td>8 Nos</td>
+                            <td>1,350.00</td>
+                            <td>Nos</td>
+                            <td>10,800.00</td>
+                        </tr>
+                        <tr class="item">
+                            <td>Annual Health Check-up for Male Above 40</td>
+                            <td>999316</td>
+                            <td>11 Nos</td>
+                            <td>2,900.00</td>
+                            <td>Nos</td>
+                            <td>31,900.00</td>
+                        </tr>
+                        <tr class="item">
+                            <td>Annual Health Check-up for Male Below 40</td>
+                            <td>999316</td>
+                            <td>34 Nos</td>
+                            <td>1,150.00</td>
+                            <td>Nos</td>
+                            <td>39,100.00</td>
+                        </tr>
+                        <tr class="item last">
+                            <td>Annual Health Check-up for Female Above 40</td>
+                            <td>999316</td>
+                            <td>2 Nos</td>
+                            <td>3,200.00</td>
+                            <td>Nos</td>
+                            <td>6,400.00</td>
+                        </tr>
+                        <tr class="total">
+                            <td colspan="5">Total</td>
+                            <td>88,200.00</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="bordered">
+                    Amount Chargeable (in words): INR Eighty Eight Thousand Two Hundred Only
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="bordered">
+                    Tax Amount (in words): NIL
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="bordered">
+                    <strong>Company's Bank Details</strong><br>
+                    Account Holder's Name: Cure and Care Primary Care Private Limited<br>
+                    Bank Name: ICICI Bank Ltd<br>
+                    Account No.: 395205000496<br>
+                    Branch & IFSC Code: Aecs Layout & ICIC0003952
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="bordered">
+                    <strong>Remarks:</strong><br>
+                    Being invoices raised towards Annual Health Check-up Services for the month of March 2024<br>
+                    Company's Pan: AAJCC4434A
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="bordered">
+                    <strong>Declaration:</strong><br>
+                    We declare that this invoice shows the actual price of the services described and that all
+                    particulars are true and correct.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="signature">
+                    For Cure and Care Primary Care Private Limited<br>
+                    Sunderarajan Jeyakumar<br>
+                    Authorised Signatory
+                </td>
+            </tr>
+        </table>
+        <div class="subject">
+            SUBJECT TO BANGALORE JURISDICTION<br>
+            This is a Computer Generated Invoice
+        </div>
+    </div>
+</body>
+
+</html>
